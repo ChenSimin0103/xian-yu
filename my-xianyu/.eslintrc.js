@@ -24,6 +24,8 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
+    "vue/attribute-order": "off",
+    "vue/max-attributes-per-line": "off", // 属性换行？？两三个就算了吧，html写太长还怎么看结构
     'linebreak-style': 0, //操作系统差异，忽略
     'global-require': 0, //暂时离不开require
     'no-use-before-define': 0, //忽略

@@ -21,7 +21,7 @@ export function getIndexbanner() {
 }
 
 export function getIconlist() {
-  const url = HOST + '/typelist'
+  const url = HOST + '/iconlist'
   return axios.get(url)
 }
 
@@ -70,12 +70,3 @@ export function getLists() {
   return axios.get(url)
 }
 
-export function getInterests() {
-  const url = HOST + '/interests'
-  return axios.get(url)
-}
-
-export function getInterests() {
-  const url = HOST + '/interests'
-  return axios.get(url)
-}

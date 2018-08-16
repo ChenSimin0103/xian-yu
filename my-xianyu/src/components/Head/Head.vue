@@ -29,9 +29,9 @@ export default {
     top 0
     display flex
     justify-content space-around
-    // align-items center
-    height 1.5rem
-    width 100%
+    align-items center
+    height 1.6rem
+    width 10rem
     z-index 200
     background-color #ffda44
     .scanner

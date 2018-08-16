@@ -24,6 +24,7 @@ module.exports = {
   },
   // add your custom rules here
   rules: {
+    'vue/attribute-hyphenation': [ 'error', 'never' ],
     "vue/attribute-order": "off",
     "vue/max-attributes-per-line": "off", // 属性换行？？两三个就算了吧，html写太长还怎么看结构
     'linebreak-style': 0, //操作系统差异，忽略

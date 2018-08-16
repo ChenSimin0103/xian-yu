@@ -27,11 +27,12 @@ export default {
     getIndexbanner().then(res => {
       if (res.status === ERR_OK) {
         this.banner = res.data.banner;
+        // 使用这个钩子可以在下次dom刷新时执行，否则拿不到this.$refs（因为这是created()钩子）
         this.$nextTick(() => {
           let swiperContainer = this.$refs.swiperContainer;
           let mySwiper = new Swiper(swiperContainer, {
             autoplay: {
-              delay: 2000,
+              delay: 4000,
             },
             loop: true,
           });
@@ -43,11 +44,16 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  .swiper
-    height 4.8rem
-    .item
-      height 100%
-      img 
-        width 100%
-        height 100%
+.swiper {
+  height: 4.8rem;
+
+  .item {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
 </style>

@@ -53,4 +53,7 @@ a
     display flex
     .tab-item
       flex 1
+      text-align center
+      padding .3rem 0
+      font-size .4rem
 </style>

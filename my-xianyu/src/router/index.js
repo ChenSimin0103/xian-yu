@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/pages/Index'
 
+import New from '@/components/New/New'
+import Near from '@/components/Near/Near'
+
 Vue.use(Router)
 
 export default new Router({
@@ -11,7 +14,17 @@ export default new Router({
       // 重定向：即每次刷新页面去的路由地址
       // redirect: '/new',
       name: 'Index',
-      component: Index
+      component: Index,
+      children: [
+        {
+          path: 'new',
+          component: New
+        },
+        {
+          path: 'near',
+          component: Near
+        }
+      ]
     }
   ]
 })

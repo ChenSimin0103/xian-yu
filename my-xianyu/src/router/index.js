@@ -1,30 +1,35 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Index from '@/pages/Index'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Index from '@/pages/Index';
+import Login from '@/pages/Login';
 
-import New from '@/components/New/New'
-import Near from '@/components/Near/Near'
+import New from '@/components/New/New';
+import Near from '@/components/Near/Near';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      // 重定向：即每次刷新页面去的路由地址
-      // redirect: '/new',
+      // 重定向：即每次刷新页面去的路由地址(否则不默认加载子路由组件)
+      redirect: '/new',
       name: 'Index',
       component: Index,
       children: [
         {
           path: 'new',
-          component: New
+          component: New,
         },
         {
           path: 'near',
-          component: Near
-        }
-      ]
-    }
-  ]
-})
+          component: Near,
+        },
+      ],
+    },
+    {
+      path: '/login',
+      component: Login,
+    },
+  ],
+});

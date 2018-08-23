@@ -52,6 +52,8 @@ export default {
     display flex
     flex-direction column
     margin-bottom .4rem
+    &:last-child
+      margin-bottom 1.6rem
     .header
       height 1.02rem
       display flex

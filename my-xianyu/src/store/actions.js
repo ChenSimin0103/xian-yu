@@ -7,6 +7,17 @@ const actions = {
       commit('SETCURINDEX', index);
     }, 100)
   },
+  hasLogin({ commit }) {
+    commit('LOGIN');
+  },
+
+  // 用户信息
+  setUserName({ commit }, username) {
+    commit('SETUSERNAME', username);
+  },
+  setUserInfo({ commit }, userinfo) {
+    commit('SETUSERINFO', userinfo);
+  }
 };
 
 export default actions;

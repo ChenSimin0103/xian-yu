@@ -14,6 +14,22 @@ const mutations = {
   // 退出登录
   LOGOUT(state) {
     state.isLogin = false;
+  },
+
+  // 用户信息
+  SETUSERNAME(state, username) {
+    state.username = username;
+  },
+  SETUSERINFO(state, userinfo) {
+    window.localStorage.setItem('useravatar', userinfo.avatar);
+    state.userinfo = userinfo;
+  },
+
+  setUserName({ commit }, userName) {
+    commit('SETUSERNAME', userName);
+  },
+  setUserInfo({ commit }, userInfo) {
+    commit('SETUSERINFO', userInfo);
   }
 };
 

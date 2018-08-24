@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Index from '@/pages/Index';
 import Login from '@/pages/Login';
+import My from '@/pages/My';
 
 import New from '@/components/New/New';
 import Near from '@/components/Near/Near';
@@ -31,5 +32,9 @@ export default new Router({
       path: '/login',
       component: Login,
     },
+    {
+      path: '/My',
+      component: My,
+    }
   ],
 });

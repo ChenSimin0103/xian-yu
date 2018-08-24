@@ -44,6 +44,10 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.swiper-container {
+  position relative;
+  margin-top 1.55rem;
+}
 .swiper {
   height: 4.8rem;
 
